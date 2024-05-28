@@ -6,8 +6,8 @@ var proxy = httpProxy.createProxyServer({ secure: false });
 
 // Modify Referer and Host header when proxing requests
 proxy.on('proxyReq', function(proxyReq, req, res, options) {
-  proxyReq.setHeader('Referer', 'https://cdn.jsdelivr.net/');
-  proxyReq.setHeader('Host', 'cdn.jsdelivr.net');
+  proxyReq.setHeader('Referer', 'https://www.jsdelivr.net/');
+  proxyReq.setHeader('Host', 'fastly.jsdelivr.net');
 });
 
 // Catch errors
@@ -23,7 +23,7 @@ var server = http.createServer(function(req, res) {
   // Handle request with proxy
   //console.log(req.rawHeaders);
   proxy.web(req, res, {
-    target: 'https://cdn.jsdelivr.net'
+    target: 'https://fastly.jsdelivr.net'
   });
 });
 
