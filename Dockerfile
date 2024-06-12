@@ -1,4 +1,4 @@
-FROM node:alpine3.19
+FROM node:20-alpine
 EXPOSE 3000
 WORKDIR /run
 COPY /* /run/
