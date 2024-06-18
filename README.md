@@ -9,7 +9,7 @@ docker run -d --restart=unless-stopped  -p 3002:3002 --name="jsdelivr-proxy" vof
 ```
 version: '3.3'
 services:
-    alist:
+    jsdelivr-proxy:
         image: 'vofficialuwu/jsdelivr-proxy:latest'
         container_name: jsdelivr-proxy
         ports:
