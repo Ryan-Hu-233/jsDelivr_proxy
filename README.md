@@ -1,8 +1,8 @@
-[![dockeri.co](https://dockerico.blankenship.io/image/vofficialuwu/jsdelivr-proxy)](https://hub.docker.com/r/vofficialuwu/jsdelivr-proxy)
+[![dockeri.co](https://dockerico.blankenship.io/image/reth01/jsdelivr-proxy)](https://hub.docker.com/r/reth01/jsdelivr-proxy)
 
 - docker-cli
 ```
-docker run -d --restart=unless-stopped  -p 3002:3002 --name="jsdelivr-proxy" vofficialuwu/jsdelivr-proxy:latest
+docker run -d --restart=unless-stopped  -p 3002:3002 --name="jsdelivr-proxy" reth01/jsdelivr-proxy:latest
 ```
 
 - docker-compose
@@ -10,7 +10,7 @@ docker run -d --restart=unless-stopped  -p 3002:3002 --name="jsdelivr-proxy" vof
 version: '3.3'
 services:
     jsdelivr-proxy:
-        image: 'vofficialuwu/jsdelivr-proxy:latest'
+        image: 'reth01/jsdelivr-proxy:latest'
         container_name: jsdelivr-proxy
         ports:
             - '3002:3002'
